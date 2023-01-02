@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../dist/output.css" />
+
+    <title>Frontend Mentor | Calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style></style>
+  </head>
+  <body>
+    <div class="h-screen w-screen flex justify-center items-center bg-black">
+      <div class="w-96 bg-vd-desat-blue-main flex flex-col items-center p-4">
+        <div
+          class="flex w-full h-full justify-between items-center text-white px-4 py-6"
+        >
+          <div class="text-2xl font-bold">calc</div>
+          <div class="flex h-full items-end">
+            <div class="text-xs pr-2">THEME</div>
+            <div class="flex flex-col">
+              <div class="w-full flex gap-2 px-1">
+                <div class="theme w-3 text-center text-xs">1</div>
+                <div class="theme w-3 text-center text-xs">2</div>
+                <div class="theme w-3 text-center text-xs">3</div>
+              </div>
+              <div
+                id="themeMarker"
+                class="bg-vd-desat-blue-toggle h-full w-full p-1 rounded-full flex gap-2"
+              >
+                <div
+                  class="h-3 w-3 bg-red-500 rounded-full cursor-pointer"
+                ></div>
+                <div class="h-3 w-3 rounded-full cursor-pointer"></div>
+                <div class="h-3 w-3 rounded-full cursor-pointer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="screen"
+          class="w-full bg-vd-desat-blue-screen rounded-lg text-right text-white font-keys text-numbers p-4 mb-4"
+        >
+          0
+        </div>
+        <div
+          class="w-full bg-vd-desat-blue-toggle p-4 rounded-lg grid grid-cols-4 justify-items-center gap-4"
+        >
+          <div
+            class="number w-full h-full bg-key-light-grey-orange rounded-lg flex justify-center items-center font-keys text-numbers p-2 border-b-4 border-key-grey-orange"
+          >
+            7
+          </div>
+          <div
+            class="number w-full h-full bg-key-light-grey-orange rounded-lg flex justify-center items-center font-keys text-numbers p-2 border-b-4 border-key-grey-orange"
+          >
+            8
+          </div>
+          <div
+            class="number w-full h-full bg-key-light-grey-orange rounded-lg flex justify-center items-center font-keys text-numbers p-2 border-b-4 border-key-grey-orange"
+          >
+            9
+          </div>
+          <div
+            class="w-full h-full bg-key-desat-dark-blue-bg text-white rounded-lg flex justify-center items-center font-keys text-xl p-2 border-b-4 border-key-desat-dark-blue-shadow"
+          >
+            DEL
+          </div>
+          <div
+            class="number w-full h-full bg-key-light-grey-orange rounded-lg flex justify-center items-center font-keys text-numbers p-2 border-b-4 border-key-grey-orange"
+          >
+            4
+          </div>
+          <div
+            class="number w-full h-full bg-key-light-grey-orange rounded-lg flex justify-center items-center font-keys text-numbers p-2 border-b-4 border-key-grey-orange"
+          >
+            5
+          </div>
+          <div
+            class="number w-full h-full bg-key-light-grey-orange rounded-lg flex justify-center items-center font-keys text-numbers p-2 border-b-4 border-key-grey-orange"
+          >
+            6
+          </div>
+          <div
+            class="operator w-full h-full bg-key-light-grey-orange rounded-lg flex justify-center items-center font-keys text-numbers p-2 border-b-4 border-key-grey-orange"
+          >
+            +
+          </div>
+          <div
+            class="number w-full h-full bg-key-light-grey-orange rounded-lg flex justify-center items-center font-keys text-numbers p-2 border-b-4 border-key-grey-orange cursor-pointer"
+          >
+            1
+          </div>
+          <div
+            class="number w-full h-full bg-key-light-grey-orange rounded-lg flex justify-center items-center font-keys text-numbers p-2 border-b-4 border-key-grey-orange"
+          >
+            2
+          </div>
+          <div
+            class="number w-full h-full bg-key-light-grey-orange rounded-lg flex justify-center items-center font-keys text-numbers p-2 border-b-4 border-key-grey-orange"
+          >
+            3
+          </div>
+          <div
+            class="operator w-full h-full bg-key-light-grey-orange rounded-lg flex justify-center items-center font-keys text-numbers p-2 border-b-4 border-key-grey-orange"
+          >
+            -
+          </div>
+          <div
+            class="number w-full h-full bg-key-light-grey-orange rounded-lg flex justify-center items-center font-keys text-numbers p-2 border-b-4 border-key-grey-orange"
+          >
+            .
+          </div>
+          <div
+            class="number w-full h-full bg-key-light-grey-orange rounded-lg flex justify-center items-center font-keys text-numbers p-2 border-b-4 border-key-grey-orange"
+          >
+            0
+          </div>
+          <div
+            class="operator w-full h-full bg-key-light-grey-orange rounded-lg flex justify-center items-center font-keys text-numbers p-2 border-b-4 border-key-grey-orange"
+          >
+            /
+          </div>
+          <div
+            class="operator w-full h-full bg-key-light-grey-orange rounded-lg flex justify-center items-center font-keys text-numbers p-2 border-b-4 border-key-grey-orange"
+          >
+            x
+          </div>
+          <div
+            onclick="reset()"
+            class="w-full bg-key-desat-dark-blue-bg text-white rounded-lg flex justify-center items-center font-keys text-xl p-2 py-4 border-b-4 border-key-desat-dark-blue-shadow col-span-2"
+          >
+            RESET
+          </div>
+          <div
+            id="equals"
+            class="w-full h-full bg-red-500 text-white rounded-lg flex justify-center items-center font-keys text-xl p-2 py-4 border-b-4 border-key-dark-red-shadow col-span-2"
+          >
+            =
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="index.js" />
+  </body>
+</html>
