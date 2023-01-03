@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
--  Solution URL: [Add solution URL here](https://github.com/rads70/FEM-Calculator)
--  Live Site URL: [Add live site URL here](https://rads70.github.io/FEM-Calculator/)
+-  Solution URL: [https://github.com/rads70/FEM-Calculator](https://github.com/rads70/FEM-Calculator)
+-  Live Site URL: [https://rads70.github.io/FEM-Calculator/](https://rads70.github.io/FEM-Calculator/)
 
 ## My process
 
