@@ -1,28 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/*.{html,js}"],
-  theme: {
-    extend: {
-      colors: {
-        "vd-desat-blue-main": "hsl(222,26%, 31%)",
-        "vd-desat-blue-toggle": "hsl(223, 31%, 20%)",
-        "vd-desat-blue-screen": "hsl(224, 36%, 15%)",
-        "key-desat-dark-blue-bg": "hsl(225, 21%, 49%)",
-        "key-desat-dark-blue-shadow": "hsl(224, 28%, 35%)",
-        "key-red-bg-toggle": "hsl(6, 6%,50%)",
-        "key-dark-red-shadow": "hsl(6, 70%, 34%)",
-        "key-light-grey-orange": "hsl(30,25%,89%)",
-        "key-grey-orange": "hsl(28, 16%, 65%)",
-        "text-dark-grey-blue": "hsl(221, 14%, 31%)",
-        "text-white": "hsl(0,0,100%)",
+   content: ["./src/*.{html,js}"],
+   theme: {
+      extend: {
+         colors: {
+            "vd-desat-blue-main": "hsl(var(--color-main-background))",
+            "vd-desat-blue-toggle": "hsl(var(--color-toggle-key-background))",
+            "vd-desat-blue-screen": "hsl(var(--color-screen-background))",
+            "key-desat-dark-blue-bg": "hsl(var(--color-key-dark-background))",
+            "key-desat-dark-blue-shadow": "hsl(var(--color-key-dark-shadow))",
+            "key-red-bg-toggle": "hsl(var(--color-key-red-toggle-bg))",
+            "key-dark-red-shadow": "hsl(var(--color-key-red-shadow))",
+            "key-light-grey-orange": "hsl(var(--color-key-light-background))",
+            "key-grey-orange": "hsl(var(--color-key-light-shadow))",
+            "text-number-keys": "hsl(var(--color-text-keys))",
+            "text-screen": "hsl(var(--color-text-screen))",
+            "text-equals": "hsl(var(--color-text-equals))",
+            "text-white": "hsl(var(--color-text-light))",
+         },
+         fontFamily: {
+            keys: "'League Spartan', sans-serif",
+         },
+         fontSize: {
+            numbers: "32px",
+         },
       },
-      fontFamily: {
-        keys: "'Space Mono', monospace;",
-      },
-      fontSize: {
-        numbers: "32px",
-      },
-    },
-  },
-  plugins: [],
+   },
+   plugins: [],
 };

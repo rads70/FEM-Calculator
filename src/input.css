@@ -2,10 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+   [data-theme="1"] {
+      --color-main-background: 222, 26%, 31%;
+      --color-toggle-key-background: 224, 36%, 20%;
+      --color-screen-background: 224, 36%, 15%;
+      --color-key-dark-background: 225, 21%, 49%;
+      --color-key-dark-shadow: 224, 28%, 35%;
+      --color-key-red-toggle-bg: 6, 63%, 50%;
+      --color-key-red-shadow: 6, 70%, 34%;
+      --color-key-light-background: 30, 25%, 89%;
+      --color-key-light-shadow: 28, 16%, 65%;
+      --color-text-keys: 221, 14%, 31%;
+      --color-text-screen: 0, 0%, 100%;
+      --color-text-light: 0, 0%, 100%;
+   }
+
+   [data-theme="2"] {
+      --color-main-background: 0, 0%, 90%;
+      --color-toggle-key-background: 0, 5%, 81%;
+      --color-screen-background: 0, 0%, 93%;
+      --color-key-dark-background: 185, 42%, 37%;
+      --color-key-dark-shadow: 185, 58%, 25%;
+      --color-key-red-toggle-bg: 25, 98%, 40%;
+      --color-key-red-shadow: 25, 99%, 27%;
+      --color-key-light-background: 45, 7%, 89%;
+      --color-key-light-shadow: 35, 11%, 61%;
+      --color-text-keys: 60, 10%, 19%;
+      --color-text-screen: 60, 10%, 19%;
+      --color-text-light: 0, 0%, 100%;
+   }
+
+   [data-theme="3"] {
+      --color-main-background: 268, 75%, 9%;
+      --color-toggle-key-background: 268, 71%, 12%;
+      --color-screen-background: 268, 71%, 12%;
+      --color-key-dark-background: 281, 89%, 26%;
+      --color-key-dark-shadow: 285, 91%, 52%;
+      --color-key-red-toggle-bg: 176, 100%, 44%;
+      --color-key-red-shadow: 177, 92%, 70%;
+      --color-key-light-background: 268, 47%, 21%;
+      --color-key-light-shadow: 290, 70%, 36%;
+      --color-text-keys: 52, 100%, 62%;
+      --color-text-screen: 52, 100%, 62%;
+      --color-text-light: 0, 0%, 100%;
+   }
+}
 .attribution {
-  font-size: 11px;
-  text-align: center;
+   font-size: 11px;
+   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+   color: hsl(228, 45%, 44%);
 }
